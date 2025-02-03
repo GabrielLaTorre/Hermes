@@ -64,4 +64,4 @@ Node v22.13 or later
 <br><br>
 ## More info
 
-This project serves as a connector between the Telegram API and another service called [Athena](https://github.com/GabrielLaTorre/Atenea), which processes incoming messages and performs different operations depending on their content. Finally, a response message will be sent to Telegram upon completion of processing.
+This project serves as a connector between the Telegram API and another service called [Atenea](https://github.com/GabrielLaTorre/Atenea), which processes incoming messages and performs different operations depending on their content. Finally, a response message will be sent to Telegram upon completion of processing.
