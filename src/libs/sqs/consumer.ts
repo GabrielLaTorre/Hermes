@@ -1,5 +1,6 @@
 import sqs from "./sqsClient";
 import dotenv from "dotenv";
+import { processOutgoingMessage } from "../../services/MessageService";
 
 dotenv.config();
 
@@ -10,6 +11,17 @@ const processMessage = async (message: AWS.SQS.Message) => {
     console.log("Message received", message.Body);
 
     console.log("Processing message...");
+
+    const data = JSON.parse(message.Body!);
+
+    await processOutgoingMessage(data);
+
+    sqs.deleteMessage(
+      {
+        ReceiptHandle: message.ReceiptHandle!,
+        QueueUrl: OUTGOING_MESSAGE_QUEUE_URL
+      }
+    ).promise();
 
   } catch (error) {
     console.error("Error processing message", error);
