@@ -70,8 +70,10 @@ This project serves as a connector between the Telegram API and another service 
 In order to run this service you will need to register on the following platforms and obtain the credentials needed to configure the environment variables.
 
 [AWS SQS](https://aws.amazon.com/sqs)
+
 [TELEGRAM](https://core.telegram.org/bots/api)
 
-TELEGRAM: You will need to create a personal bot, referring to the documentation provided. Once all the services are up and running, you will be able to communicate with the bot.
-AWS: You will need to create 2 message queues in AWS SQS, one for incoming messages and one for outgoing messages.
+- TELEGRAM: You will need to create a personal bot, referring to the documentation provided. Once all the services are up and running, you will be able to communicate with the bot.
+  
+- AWS: You will need to create 2 message queues in AWS SQS, one for incoming messages and one for outgoing messages.
 
